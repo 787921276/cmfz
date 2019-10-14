@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.mapper.ChapterMapper">
+
+    <select id="findByPage" resultType="chapter">
+      select c.* from album a join chapter c on a.id=c.albumid WHERE c.albumid=#{albumid} LIMIT #{start},#{rows}
+    </select>
+    <select id="count" resultType="java.lang.Integer">
+            select count(id) from chapter where albumid=#{albumid}
+    </select>
+    <insert id="save" parameterType="chapter">
+      insert into chapter values (#{id},#{title},#{size},#{longTime},#{createDate},#{url},#{albumid});    </insert>
+    <update id="updata" parameterType="chapter">
+        update chapter set url = #{url},size=#{size},longTime=#{longTime} where id=#{id}
+    </update>
+
+    <delete id="delete">
+        delete from chapter where id in
+        <foreach collection="array" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>
+

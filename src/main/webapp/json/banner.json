@@ -1,0 +1,26 @@
+[
+  {
+    "id": "001",
+    "imgPath": "A2.jpg",
+    "title": "轮播图1",
+    "status": "正常",
+    "desc": "好",
+    "cerate_date": "2019-12-10"
+  },
+  {
+    "id": "002",
+    "imgPath": "A2.jpg",
+    "title": "轮播图1",
+    "status": "正常",
+    "desc": "好",
+    "cerate_date": "2019-12-10"
+  },
+  {
+    "id": "003",
+    "imgPath": "A2.jpg",
+    "title": "轮播图1",
+    "status": "正常",
+    "desc": "好",
+    "cerate_date": "2019-12-10"
+  }
+]
